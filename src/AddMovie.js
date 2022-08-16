@@ -11,9 +11,11 @@ function AddMovie(props) {
     const posterURL=useRef()
     const trailerURL=useRef()
     const rating=useRef()
+    const id = props.movies.length + 1
    
     const handleSave = () => {
         props.handleAddMovie({
+            id: id,
             title: title.current.value,
             description: description.current.value,
             posterURL: posterURL.current.value,
